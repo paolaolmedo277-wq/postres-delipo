@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELIPOP | Postres Irresistibles y Felicidad en Cada Bocado</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'delipop-pink': '#FF69B4', // Rosa fuerte
+                        'delipop-cream': '#FAF0E6', // Crema suave
+                        'delipop-berry': '#880E4F', // Rosa oscuro para textos
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-delipop-cream">
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="bg-delipop-pink shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Nombre -->
+            <div class="text-3xl font-extrabold tracking-widest text-white">
+                DELIPOP
+            </div>
+            <!-- Menú de Navegación (visible en desktop) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-white hover:text-pink-200 transition duration-300 font-semibold">Inicio</a>
+                <a href="#menu" class="text-white hover:text-pink-200 transition duration-300 font-semibold">Nuestro Menú</a>
+                <a href="#especiales" class="text-white hover:text-pink-200 transition duration-300 font-semibold">Especiales</a>
+                <a href="#contacto" class="text-white hover:text-pink-200 transition duration-300 font-semibold">Contacto</a>
+            </nav>
+            <!-- Botón de Menú Móvil (simple, no funcional sin JS avanzado) -->
+            <button class="md:hidden p-2 text-white hover:text-pink-200 rounded-md">
+                <!-- Icono de Hamburguesa (SVG de Lucide-react) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO (Principal) -->
+    <main id="inicio" class="pt-16 pb-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-delipop-berry mb-4 leading-tight">
+                DELIPOP
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Donde cada postre es una obra de arte. Explora la dulzura de nuestras creaciones horneadas con pasión.
+            </p>
+            <a href="#menu" class="inline-block bg-delipop-pink text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transition duration-300 transform hover:scale-105">
+                ¡Descubre Nuestro Menú!
+            </a>
+        </div>
+    </main>
+
+    <!-- SECCIÓN DE MENÚ (Tarjetas de Postres) -->
+    <section id="menu" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-delipop-berry mb-12">Nuestras Delicias Irresistibles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Tarjeta 1: Fresas con Crema -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+                    <!-- Placeholder de imagen para Fresas con Crema -->
+                    <img src="https://placehold.co/600x400/FFD1DC/880E4F?text=Fresas+Crema" alt="Fresas frescas con crema dulce" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Fresas con Crema</h3>
+                        <p class="text-gray-600 mb-4 text-sm">La combinación clásica: fresas de temporada bañadas en nuestra crema especial de la casa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+                            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Duraznos con Crema -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+                    <!-- Placeholder de imagen para Duraznos con Crema -->
+                    <img src="https://placehold.co/600x400/FAD6A5/880E4F?text=Duraznos+Crema" alt="Duraznos frescos con crema dulce" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Duraznos con Crema</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Suaves duraznos en almíbar, perfectos con nuestra base cremosa y un toque de canela.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+                            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Pay de Limón -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+                    <!-- Placeholder de imagen para Pay de Limón -->
+                    <img src="https://placehold.co/600x400/D4E09B/880E4F?text=Pay+Limon" alt="Pay de Limón con merengue" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Pay de Limón</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Base crujiente, relleno ácido y dulce, y un merengue dorado espectacular. El más vendido.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-extrabold text-delipop-pink">$25.00</span>
+                            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Pay de Mango -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+                    <!-- Placeholder de imagen para Pay de Mango -->
+                    <img src="https://placehold.co/600x400/FFC300/880E4F?text=Pay+Mango" alt="Pay de Mango cremoso" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Pay de Mango</h3>
+                        <p class="text-gray-600 mb-4 text-sm">El sabor tropical en una rebanada. Cremoso relleno de mango natural sobre una costra de galleta.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-extrabold text-delipop-pink">$35.00</span>
+                            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5: Uvas con Crema -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+                    <!-- Placeholder de imagen para Uvas con Crema -->
+                    <img src="https://placehold.co/600x400/9980FA/880E4F?text=Uvas+Crema" alt="Uvas frescas con crema dulce" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Uvas con Crema</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Uvas frescas y jugosas, una opción ligera y refrescante bañada en nuestra crema de vainilla.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+                            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                                Pedir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE LLAMADA A LA ACCIÓN (Especiales) -->
+    <section id="especiales" class="bg-delipop-pink py-16 mt-16">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">¡Especial de la Semana!</h2>
+            <p class="text-lg text-pink-100 mb-6">
+                No te pierdas nuestra Torta de Pistacho y Cardamomo. Una explosión de sabor que solo estará disponible por tiempo limitado.
+            </p>
+            <a href="#contacto" class="inline-block bg-white text-delipop-pink font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-100 transition duration-300">
+                Encárgala Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO/UBICACIÓN -->
+    <section id="contacto" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Información de Contacto -->
+            <div class="bg-white p-8 rounded-xl shadow-2xl">
+                <h3 class="text-3xl font-bold text-delipop-berry mb-6">Contacta con DELIPOP</h3>
+                <p class="text-gray-600 mb-4">Estamos listos para endulzar tu vida. Contáctanos para pedidos, eventos o preguntas.</p>
+                
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-center">
+                        <span class="text-delipop-pink font-semibold mr-2">✉️</span> 
+                        hola@delipop.com
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-delipop-pink font-semibold mr-2">📞</span> 
+                        +52 55 1234 5678
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-delipop-pink font-semibold mr-2">📍</span> 
+                        Av. Delicias #101, Ciudad Azúcar
+                    </li>
+                </ul>
+                <div class="mt-6">
+                    <p class="text-sm italic text-gray-500">Horario: Lun - Sáb, 10:00 a.m. - 7:00 p.m.</p>
+                </div>
+            </div>
+
+            <!-- Mapa Placeholder -->
+            <div class="bg-gray-200 rounded-xl shadow-2xl overflow-hidden h-72 md:h-auto">
+                <img src="https://placehold.co/800x600/CCCCCC/666666?text=Mapa+de+Ubicacion" alt="Mapa de ubicación de la tienda DELIPOP" class="w-full h-full object-cover">
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-delipop-berry py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white text-sm">
+            <p>&copy; 2025 DELIPOP - Todos los derechos reservados.</p>
+            <p class="mt-2 text-pink-200">Hecho con amor y mucho azúcar.</p>
+        </div>
+    </footer>
+<!-- Tarjeta 1: Fresas con Crema -->
+<div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+    <img src="https://images.pexels.com/photos/1359326/pexels-photo-1359326.jpeg"
+         alt="Fresas frescas con crema" class="w-full h-56 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Fresas con Crema</h3>
+        <p class="text-gray-600 mb-4 text-sm">La combinación clásica: fresas de temporada bañadas en nuestra crema especial.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 2: Duraznos con Crema -->
+<div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+    <img src="https://images.pexels.com/photos/616841/pexels-photo-616841.jpeg"
+         alt="Duraznos con crema" class="w-full h-56 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Duraznos con Crema</h3>
+        <p class="text-gray-600 mb-4 text-sm">Suaves duraznos con una capa de crema dulce y ligera.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 3: Pay de Limón -->
+<div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+    <img src="https://images.pexels.com/photos/3026809/pexels-photo-3026809.jpeg"
+         alt="Pay de Limón" class="w-full h-56 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Pay de Limón</h3>
+        <p class="text-gray-600 mb-4 text-sm">Relleno ácido y dulce con un merengue perfectamente dorado.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-extrabold text-delipop-pink">$25.00</span>
+            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 4: Pay de Mango -->
+<div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+    <img src="https://images.pexels.com/photos/5945884/pexels-photo-5945884.jpeg"
+         alt="Pay de Mango" class="w-full h-56 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Pay de Mango</h3>
+        <p class="text-gray-600 mb-4 text-sm">Cremoso, tropical y perfecto para cualquier ocasión.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-extrabold text-delipop-pink">$35.00</span>
+            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta 5: Uvas con Crema -->
+<div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-delipop-pink/40 transition duration-500 transform hover:-translate-y-1">
+    <img src="https://images.pexels.com/photos/5946620/pexels-photo-5946620.jpeg"
+         alt="Uvas con crema" class="w-full h-56 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-delipop-berry mb-2">Uvas con Crema</h3>
+        <p class="text-gray-600 mb-4 text-sm">Uvas frescas y jugosas con una crema suave de vainilla.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-3xl font-extrabold text-delipop-pink">$45.00</span>
+            <button class="bg-delipop-pink text-white py-2 px-5 rounded-full text-sm font-semibold hover:bg-pink-600">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
